@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#5264e8"><title>SkyCast — Weather Dashboard</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="shell">
+<header class="header"><div class="logo">☼</div><div><p class="eyebrow">LIVE WEATHER, MADE SIMPLE</p><h1>SkyCast</h1></div><span class="live"><i></i> Weather dashboard</span></header>
+<section class="hero"><div><p class="eyebrow">CHECK THE SKY</p><h2>What's the weather<br>like today?</h2><p class="muted">Search a city to see current conditions and helpful weather details.</p></div><div class="hero-icon">☁</div></section>
+<form id="searchForm" class="search"><label class="sr-only" for="cityInput">City name</label><span>⌕</span><input id="cityInput" placeholder="Enter a city, e.g. Chennai" maxlength="80" required><button class="btn" type="submit">Search weather</button></form>
+<p id="status" class="status" role="status">Enter a city name to get started.</p>
+<section id="weatherCard" class="weather-card hidden" aria-live="polite">
+<div class="weather-main"><div><p id="place" class="place"></p><p id="condition" class="condition"></p><div class="temperature"><span id="temp">--</span><sup>°C</sup></div><p id="feels" class="muted"></p></div><div id="weatherIcon" class="weather-icon">☀</div></div>
+<div class="metrics"><article><span>💧</span><p>Humidity</p><strong id="humidity">--</strong></article><article><span>🌬</span><p>Wind speed</p><strong id="wind">--</strong></article><article><span>🌡</span><p>Feels like</p><strong id="feelsMetric">--</strong></article></div>
+<p id="updated" class="updated"></p>
+</section>
+<section class="tips"><h3>How to use SkyCast</h3><div class="tip-grid"><article><b>01</b><p>Enter a city name in the search box.</p></article><article><b>02</b><p>SkyCast fetches live weather data from a public weather API.</p></article><article><b>03</b><p>If a city is not found or the network fails, a helpful message appears.</p></article></div></section>
+<footer>Built with JavaScript Fetch API · async/await · Open-Meteo</footer>
+</main><script src="script.js"></script></body></html>
